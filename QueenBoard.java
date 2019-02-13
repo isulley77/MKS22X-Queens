@@ -35,7 +35,7 @@ public class QueenBoard{
       return true;
     }
   }
-
+return false;
 
   }
 
@@ -61,8 +61,8 @@ public class QueenBoard{
         return true;
       }
     }
-
-
+  
+    return false;
   }
 
     /**
@@ -80,8 +80,8 @@ public class QueenBoard{
      *excludes the character up to the *)
      */
      public String toString(){
-
-
+  
+    
      }
 
 
@@ -94,20 +94,18 @@ public class QueenBoard{
      *@throws IllegalStateException when the board starts with any non-zero value
 
      */
-     public boolean solve(){
+//     public boolean solve(){
 
 
-     }
+  //   }
 
      /**
      *@return the number of solutions found, and leaves the board filled with only 0's
      *@throws IllegalStateException when the board starts with any non-zero value
      */
-     public int countSolutions(){
+//     public int countSolutions(){
 
 
-     }
-
-
+  //   }
 
 }
