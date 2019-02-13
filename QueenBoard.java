@@ -3,16 +3,38 @@ public class QueenBoard{
   private int[][]board;
 
 
-
+// Constructor
   public QueenBoard(int size){
     board = new int[size][size];
-
-
   }
 
 
 
   private boolean addQueen(int r, int c){
+
+    //space is threatened by a queen
+    if(board[r][c] != 0){
+      return false;
+    }
+
+    if(board[r][c] == 0){
+
+
+      board[r][c] = -1;//placeQueen
+
+    for(int i = 1; i < board.length - c; i++){
+      board[r][c + i] += 1;
+
+      if(r - i >= 0){
+        board[r - i][c + i] += 1;
+      }
+
+      if(r + i < board.length){
+        board[r + i][c + i] += 1;
+      }
+      return true;
+    }
+  }
 
 
   }
