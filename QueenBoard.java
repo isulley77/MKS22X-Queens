@@ -44,7 +44,22 @@ public class QueenBoard{
   private boolean removeQueen(int r, int c){
 
     if(board[r][c] == -1){ //check if space is a queen
-      board[r][c] = 0; // make space empty
+
+      board[r][c] = 0;// remove queen
+
+      //remove marked spaces
+      for(int i = 1; i < board.length - c; i++){
+        board[r][c + i] -= 1;
+
+        if(r - i >= 0){
+          board[r - i][c + i] -= 1;
+        }
+
+        if(r + i < board.length){
+          board[r + i][c + i] -= 1;
+        }
+        return true;
+      }
     }
 
 
