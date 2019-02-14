@@ -128,14 +128,17 @@ return false;
      }
   
       public boolean solveR(int col){
-       if col is past end of board:
-          return true
-       for each row:
-           if addQueen:
-               if solveR(col+1):
-                   return true
-               removeQueen
-       return false
+       if(col > board.length){
+          return true;
+       }
+       for(int i = 0; i < board[0].length; i++){
+           if(addQueen(r + i, c)){
+               if solveR(col+1){
+                   return true;
+               }
+               removeQueen(r + i, c);
+               }
+       return false;
       }
 
 
