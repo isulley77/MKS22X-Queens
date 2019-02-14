@@ -10,7 +10,7 @@ public class QueenBoard{
 
 
 
-  private boolean addQueen(int r, int c){
+  public boolean addQueen(int r, int c){
 
     //space is threatened by a queen
     if(board[r][c] != 0){
@@ -41,7 +41,7 @@ return false;
 
 
 
-  private boolean removeQueen(int r, int c){
+  public boolean removeQueen(int r, int c){
 
     if(board[r][c] == -1){ //check if space is a queen
 
@@ -100,7 +100,7 @@ return false;
            }
            
            if(j >= board[j].length - 1){
-             s += "/n";
+             s += "\n";
            }
          }
        }
@@ -117,10 +117,27 @@ return false;
      *@throws IllegalStateException when the board starts with any non-zero value
 
      */
-//     public boolean solve(){
+     public boolean solve(){
+       if(board[0][0] == 0){
+         throw new IllegalStateException();
+       }
+       
+       if
 
 
-  //   }
+     }
+  
+      public boolean solveR(int col){
+       if col is past end of board:
+          return true
+       for each row:
+           if addQueen:
+               if solveR(col+1):
+                   return true
+               removeQueen
+       return false
+      }
+
 
      /**
      *@return the number of solutions found, and leaves the board filled with only 0's
